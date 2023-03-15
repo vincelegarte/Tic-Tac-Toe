@@ -1,17 +1,8 @@
+package views;
 
 import javax.swing.JOptionPane;
 
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
-/**
- *
- * @author Andivv
- */
-public class ttt_play extends javax.swing.JFrame {
+public class Play extends javax.swing.JFrame {
 
     private String pTurn = "X";
     private String p1;
@@ -19,7 +10,7 @@ public class ttt_play extends javax.swing.JFrame {
     /**
      * Creates new form ttt_single
      */
-    public ttt_play() {
+    public Play() {
         initComponents();
         this.playBoard.setVisible(false);
     }
@@ -148,7 +139,7 @@ public class ttt_play extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        two = new javax.swing.JPanel();
+        panel = new javax.swing.JPanel();
         playBoard = new javax.swing.JLayeredPane();
         turnLabel = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
@@ -163,7 +154,7 @@ public class ttt_play extends javax.swing.JFrame {
         play_bg = new javax.swing.JLabel();
         resetButton = new javax.swing.JButton();
         quitButton1 = new javax.swing.JButton();
-        username = new javax.swing.JLayeredPane();
+        userName = new javax.swing.JLayeredPane();
         p1UN = new javax.swing.JTextField();
         p2UN = new javax.swing.JTextField();
         un_bg = new javax.swing.JLabel();
@@ -173,7 +164,7 @@ public class ttt_play extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        two.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        panel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         playBoard.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -300,7 +291,7 @@ public class ttt_play extends javax.swing.JFrame {
         });
         playBoard.add(jButton9, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 370, 120, 110));
 
-        play_bg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/tttplay.gif"))); // NOI18N
+        play_bg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/backgrounds/tttplay.gif"))); // NOI18N
         playBoard.add(play_bg, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         resetButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -319,9 +310,9 @@ public class ttt_play extends javax.swing.JFrame {
         });
         playBoard.add(quitButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 530, 160, 60));
 
-        two.add(playBoard, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 800, 600));
+        panel.add(playBoard, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 800, 600));
 
-        username.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        userName.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         p1UN.setBackground(new java.awt.Color(255, 219, 30));
         p1UN.setFont(new java.awt.Font("Century Gothic", 1, 50)); // NOI18N
@@ -329,8 +320,7 @@ public class ttt_play extends javax.swing.JFrame {
         p1UN.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         p1UN.setText("PLAYER ONE");
         p1UN.setBorder(null);
-        p1UN.setOpaque(false);
-        username.add(p1UN, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 170, 530, 90));
+        userName.add(p1UN, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 170, 530, 90));
 
         p2UN.setBackground(new java.awt.Color(255, 219, 30));
         p2UN.setFont(new java.awt.Font("Century Gothic", 1, 50)); // NOI18N
@@ -338,11 +328,10 @@ public class ttt_play extends javax.swing.JFrame {
         p2UN.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         p2UN.setText("PLAYER TWO");
         p2UN.setBorder(null);
-        p2UN.setOpaque(false);
-        username.add(p2UN, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 390, 530, 80));
+        userName.add(p2UN, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 390, 530, 80));
 
-        un_bg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/tttusername.png"))); // NOI18N
-        username.add(un_bg, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+        un_bg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/backgrounds/tttusername.png"))); // NOI18N
+        userName.add(un_bg, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         startButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         startButton.addActionListener(new java.awt.event.ActionListener() {
@@ -350,7 +339,7 @@ public class ttt_play extends javax.swing.JFrame {
                 startButtonActionPerformed(evt);
             }
         });
-        username.add(startButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 530, 190, 60));
+        userName.add(startButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 530, 190, 60));
 
         quitButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         quitButton.addActionListener(new java.awt.event.ActionListener() {
@@ -358,11 +347,11 @@ public class ttt_play extends javax.swing.JFrame {
                 quitButtonActionPerformed(evt);
             }
         });
-        username.add(quitButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 530, 170, 60));
+        userName.add(quitButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 530, 170, 60));
 
-        two.add(username, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 800, 600));
+        panel.add(userName, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 800, 600));
 
-        getContentPane().add(two, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 800, 600));
+        getContentPane().add(panel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 800, 600));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -467,13 +456,13 @@ public class ttt_play extends javax.swing.JFrame {
 
     private void quitButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_quitButton1ActionPerformed
         // TODO add your handling code here:
-        new ttt_menu().setVisible(true);
+        new Start().setVisible(true);
         this.dispose();
     }//GEN-LAST:event_quitButton1ActionPerformed
 
     private void quitButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_quitButtonActionPerformed
         // TODO add your handling code here:
-        new ttt_menu().setVisible(true);
+        new Start().setVisible(true);
         this.dispose();
     }//GEN-LAST:event_quitButtonActionPerformed
 
@@ -481,54 +470,24 @@ public class ttt_play extends javax.swing.JFrame {
         // TODO add your handling code here:
         this.playBoard.setVisible(true);
         
-        p1 = p1UN.getText();
-        p2 = p2UN.getText();
-        turnLabel.setText(p1 + "'s Turn");
-//        if (p1UN.equals("")){
-//            p1 = "PLAYER ONE";
-//        }
-//        if (p2UN.equals("")){
-//            p2 = "PLAYER TWO";
-//        }
-    }//GEN-LAST:event_startButtonActionPerformed
-
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(ttt_play.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(ttt_play.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(ttt_play.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(ttt_play.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        if (p1UN.getText().isEmpty()){
+            p1 = "X";
+        } else if (p1UN.getText().equals(p2UN.getText())){
+            p1 = p1UN.getText()+" (X)";
+        } else {
+            p1 = p1UN.getText();
         }
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new ttt_play().setVisible(true);
-            }
-        });
-    }
+        
+        if (p2UN.getText().isEmpty()){
+            p2 = "O";
+        } else if (p2UN.getText().equals(p1UN.getText())){
+            p2 = p2UN.getText()+" (O)";
+        } else {
+            p2 = p2UN.getText();
+        }
+        
+        turnLabel.setText(p1 + "'s Turn");
+    }//GEN-LAST:event_startButtonActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
@@ -542,6 +501,7 @@ public class ttt_play extends javax.swing.JFrame {
     private javax.swing.JButton jButton9;
     private javax.swing.JTextField p1UN;
     private javax.swing.JTextField p2UN;
+    private javax.swing.JPanel panel;
     private javax.swing.JLayeredPane playBoard;
     private javax.swing.JLabel play_bg;
     private javax.swing.JButton quitButton;
@@ -549,8 +509,7 @@ public class ttt_play extends javax.swing.JFrame {
     private javax.swing.JButton resetButton;
     private javax.swing.JButton startButton;
     private javax.swing.JLabel turnLabel;
-    private javax.swing.JPanel two;
     private javax.swing.JLabel un_bg;
-    private javax.swing.JLayeredPane username;
+    private javax.swing.JLayeredPane userName;
     // End of variables declaration//GEN-END:variables
 }

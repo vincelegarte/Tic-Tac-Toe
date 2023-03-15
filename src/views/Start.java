@@ -1,21 +1,12 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+package views;
 
-/**
- *
- * @author Andivv
- */
-public class ttt_menu extends javax.swing.JFrame {
+public class Start extends javax.swing.JFrame {
 
     /**
      * Creates new form ttt_menu
      */
-    public ttt_menu() {
+    public Start() {
         initComponents();
-        this.menu.setVisible(true);
     }
 
     /**
@@ -27,7 +18,7 @@ public class ttt_menu extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        All = new javax.swing.JPanel();
+        panel = new javax.swing.JPanel();
         menu = new javax.swing.JLayeredPane();
         menu_bg = new javax.swing.JLabel();
         playButton = new javax.swing.JButton();
@@ -35,11 +26,11 @@ public class ttt_menu extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        All.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        panel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         menu.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        menu_bg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/tttmenu.gif"))); // NOI18N
+        menu_bg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/backgrounds/tttmenu.gif"))); // NOI18N
         menu.add(menu_bg, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         playButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -50,16 +41,16 @@ public class ttt_menu extends javax.swing.JFrame {
         });
         menu.add(playButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 460, 260, 70));
 
-        All.add(menu, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+        panel.add(menu, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
-        getContentPane().add(All, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 800, 600));
+        getContentPane().add(panel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 800, 600));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void playButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_playButtonActionPerformed
         // TODO add your handling code here:
-        new ttt_play().setVisible(true);
+        new Play().setVisible(true);
         this.dispose();
     }//GEN-LAST:event_playButtonActionPerformed
 
@@ -80,28 +71,36 @@ public class ttt_menu extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(ttt_menu.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Start.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(ttt_menu.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Start.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(ttt_menu.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Start.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(ttt_menu.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Start.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
-
+        //</editor-fold>
+        SplashScreen start = new SplashScreen();
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new ttt_menu().setVisible(true);
+                start.setVisible(true);
             }
         });
+        try{
+            Thread.sleep(2850);
+        }catch (Exception e){
+            
+        }
+        new Start().setVisible(true);
+        start.dispose();
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JPanel All;
     private javax.swing.JLayeredPane menu;
     private javax.swing.JLabel menu_bg;
+    private javax.swing.JPanel panel;
     private javax.swing.JButton playButton;
     // End of variables declaration//GEN-END:variables
 }
