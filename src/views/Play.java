@@ -71,9 +71,9 @@ public class Play extends javax.swing.JFrame {
         String  eight = jButton8.getText();
         String  nine = jButton9.getText();
         
-        if ( one != "" && two != "" && three != ""
-                && four != "" && five != "" && six != ""
-                && seven != "" && eight != "" && nine != ""){
+        if ( one.equals("") && two.equals("") && three.equals("")
+                && four.equals("") && five.equals("") && six.equals("")
+                && seven.equals("") && eight.equals("") && nine.equals("")){
             JOptionPane.showMessageDialog(this,
                 "Draw!",
                 "No Winner",
@@ -93,37 +93,37 @@ public class Play extends javax.swing.JFrame {
         String  eight = jButton8.getText();
         String  nine = jButton9.getText();
         
-        if (one == "X" && two == "X" && three == "X"){ //top horizontal
+        if (one.equals("X") && two.equals("X") && three.equals("X")){ //top horizontal
             xWins();
-        } else if (four == "X" && five == "X" && six == "X"){ //middle horizontal
+        } else if (four.equals("X") && five.equals("X") && six.equals("X")){ //middle horizontal
             xWins();
-        } else if (seven == "X" && eight == "X" && nine == "X"){ //bottom horizontal
+        } else if (seven.equals("X") && eight.equals("X") && nine.equals("X")){ //bottom horizontal
             xWins();
-        } else if (one == "X" && four == "X" && seven == "X"){ //left vertical
+        } else if (one.equals("X") && four.equals("X") && seven.equals("X")){ //left vertical
             xWins();
-        } else if (two == "X" && five == "X" && eight == "X"){ //middle vertical
+        } else if (two.equals("X") && five.equals("X") && eight.equals("X")){ //middle vertical
             xWins();
-        } else if (three == "X" && six == "X" && nine == "X"){ //right vertical
+        } else if (three.equals("X") && six.equals("X") && nine.equals("X")){ //right vertical
             xWins();
-        } else if (one == "X" && five == "X" && nine == "X"){ //left diagonal
+        } else if (one.equals("X") && five.equals("X") && nine.equals("X")){ //left diagonal
             xWins();
-        } else if (three == "X" && five == "X" && seven == "X"){ //right diagonal
+        } else if (three.equals("X") && five.equals("X") && seven.equals("X")){ //right diagonal
             xWins();
-        } else if (one == "O" && two == "O" && three == "O"){ //top horizontal
+        } else if (one.equals("O") && two.equals("O") && three.equals("O")){ //top horizontal
             oWins();
-        } else if (four == "O" && five == "O" && six == "O"){ //middle horizontal
+        } else if (four.equals("O") && five.equals("O") && six.equals("O")){ //middle horizontal
             oWins();
-        } else if (seven == "O" && eight == "O" && nine == "O"){ //bottom horizontal
+        } else if (seven.equals("O") && eight.equals("O") && nine.equals("O")){ //bottom horizontal
             oWins();
-        } else if (one == "O" && four == "O" && seven == "O"){ //left vertical
+        } else if (one.equals("O") && four.equals("O") && seven.equals("O")){ //left vertical
             oWins();
-        } else if (two == "O" && five == "O" && eight == "O"){ //middle vertical
+        } else if (two.equals("O") && five.equals("O") && eight.equals("O")){ //middle vertical
             oWins();
-        } else if (three == "O" && six == "O" && nine == "O"){ //right vertical
+        } else if (three.equals("O") && six.equals("O") && nine.equals("O")){ //right vertical
             oWins();
-        } else if (one == "O" && five == "O" && nine == "O"){ //left diagonal
+        } else if (one.equals("O") && five.equals("O") && nine.equals("O")){ //left diagonal
             oWins();
-        } else if (three == "O" && five == "O" && seven == "O"){ //right diagonal
+        } else if (three.equals("O") && five.equals("O") && seven.equals("O")){ //right diagonal
             oWins();
         } else {
             nWins();

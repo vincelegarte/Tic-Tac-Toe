@@ -24,7 +24,7 @@ public class SplashScreen extends javax.swing.JFrame {
         setMinimumSize(new java.awt.Dimension(800, 600));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        splashscreen_bg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/backgrounds/ttt_splash.gif"))); // NOI18N
+        splashscreen_bg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/backgrounds/tttsplash.gif"))); // NOI18N
         getContentPane().add(splashscreen_bg, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 800, 600));
 
         pack();

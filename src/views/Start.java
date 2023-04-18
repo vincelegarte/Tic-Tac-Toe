@@ -84,13 +84,14 @@ public class Start extends javax.swing.JFrame {
         SplashScreen start = new SplashScreen();
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
+            @Override
             public void run() {
                 start.setVisible(true);
             }
         });
         try{
             Thread.sleep(2850);
-        }catch (Exception e){
+        }catch (InterruptedException e){
             
         }
         new Start().setVisible(true);
