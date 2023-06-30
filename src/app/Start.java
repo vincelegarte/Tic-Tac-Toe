@@ -1,4 +1,4 @@
-package views;
+package app;
 
 public class Start extends javax.swing.JFrame {
 
@@ -24,6 +24,8 @@ public class Start extends javax.swing.JFrame {
         playButton = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Start");
+        setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         panel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -46,6 +48,7 @@ public class Start extends javax.swing.JFrame {
         getContentPane().add(panel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 800, 600));
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void playButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_playButtonActionPerformed

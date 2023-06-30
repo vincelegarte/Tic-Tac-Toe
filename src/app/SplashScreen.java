@@ -1,4 +1,4 @@
-package views;
+package app;
 
 public class SplashScreen extends javax.swing.JFrame {
 
@@ -21,13 +21,16 @@ public class SplashScreen extends javax.swing.JFrame {
         splashscreen_bg = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Launching...");
         setMinimumSize(new java.awt.Dimension(800, 600));
+        setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         splashscreen_bg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/backgrounds/tttsplash.gif"))); // NOI18N
         getContentPane().add(splashscreen_bg, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 800, 600));
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

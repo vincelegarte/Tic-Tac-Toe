@@ -1,4 +1,4 @@
-package views;
+package app;
 
 import javax.swing.JOptionPane;
 
@@ -60,7 +60,6 @@ public class Play extends javax.swing.JFrame {
     }
     
     private void nWins(){ //draw
-        
         String  one = jButton1.getText();
         String  two = jButton2.getText();
         String  three = jButton3.getText();
@@ -71,9 +70,10 @@ public class Play extends javax.swing.JFrame {
         String  eight = jButton8.getText();
         String  nine = jButton9.getText();
         
-        if ( one.equals("") && two.equals("") && three.equals("")
-                && four.equals("") && five.equals("") && six.equals("")
-                && seven.equals("") && eight.equals("") && nine.equals("")){
+        if (!one.equals("") && !two.equals("") && !three.equals("")
+                && !four.equals("") && !five.equals("") && !six.equals("")
+                && !seven.equals("") && !eight.equals("") && !nine.equals("")){
+            turnLabel.setText("Draw!");
             JOptionPane.showMessageDialog(this,
                 "Draw!",
                 "No Winner",
@@ -162,8 +162,11 @@ public class Play extends javax.swing.JFrame {
         quitButton = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("TicTacToe");
+        setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        panel.setToolTipText("");
         panel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         playBoard.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -354,6 +357,7 @@ public class Play extends javax.swing.JFrame {
         getContentPane().add(panel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 800, 600));
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
